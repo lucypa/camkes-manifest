@@ -4,14 +4,14 @@
      SPDX-License-Identifier: BSD-2-Clause
 -->
 <manifest>
-    <remote name="seL4" fetch="../seL4"/>
-    <remote name="SEL4PROJ" fetch="../SEL4PROJ"/>
+    <remote name="seL4" fetch="../xurtis"/>
+    <remote name="SEL4PROJ" fetch="../xurtis"/>
     <remote fetch="https://git.savannah.gnu.org/git/" name="lwip"/>
     <remote name="opensbi" fetch="https://github.com/riscv"/>
     <remote fetch="https://github.com/tass-belgium" name="picotcp"/>
     <remote fetch="https://github.com/NICTA" name="nicta"/>
     <!-- default revision for each project, and name of the remote -->
-    <default revision="master" remote="seL4"/>
+    <default revision="ddf-example" remote="seL4"/>
     <!-- list of 'projects' (i.e repositories), path is relative to the path in remote above -->
     <project name="seL4.git" path="kernel"/>
     <project name="seL4_tools.git" path="tools/seL4">
