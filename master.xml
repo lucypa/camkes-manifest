@@ -4,14 +4,14 @@
      SPDX-License-Identifier: BSD-2-Clause
 -->
 <manifest>
-    <remote name="seL4" fetch="../xurtis"/>
-    <remote name="SEL4PROJ" fetch="../xurtis"/>
+    <remote name="seL4" fetch="../seL4"/>
+    <remote name="lucypa" fetch="../lucypa"/>
     <remote fetch="https://git.savannah.gnu.org/git/" name="lwip"/>
     <remote name="opensbi" fetch="https://github.com/riscv"/>
     <remote fetch="https://github.com/tass-belgium" name="picotcp"/>
     <remote fetch="https://github.com/NICTA" name="nicta"/>
     <!-- default revision for each project, and name of the remote -->
-    <default revision="ddf-example" remote="seL4"/>
+    <default revision="master" remote="seL4"/>
     <!-- list of 'projects' (i.e repositories), path is relative to the path in remote above -->
     <project name="seL4.git" path="kernel"/>
     <project name="seL4_tools.git" path="tools/seL4">
@@ -24,19 +24,19 @@
     <project name="capdl.git" path="projects/capdl"/>
     <project name="pruner.git" path="tools/pruner"/>
     <project name="seL4_libs.git" path="projects/seL4_libs"/>
-    <project name="util_libs.git" path="projects/util_libs"/>
+    <project name="util_libs.git" path="projects/util_libs" remote="lucypa" revision="imx8mm_fix"/>
     <project name="sel4runtime" path="projects/sel4runtime"/>
     <project name="musllibc.git" path="projects/musllibc" revision="sel4"/>
     <project name="picotcp.git" path="projects/picotcp" remote="picotcp" revision="refs/tags/v1.7.0"/>
     <project name="lwip.git" path="projects/lwip" remote="lwip" revision="refs/tags/STABLE-2_1_2_RELEASE"/>
     <project name="rumprun.git" path="tools/rumprun"/>
-    <project name="global-components.git" path="projects/global-components"/>
-    <project name="camkes.git" path="projects/camkes">
+    <project name="global-components.git" path="projects/global-components" remote="lucypa" revision="lwipserver2"/>
+    <project name="camkes.git" path="projects/camkes" remote="lucypa" revision="lwip_echoserver">
         <linkfile src="easy-settings.cmake" dest="easy-settings.cmake"/>
     </project>
     <project name="seL4_projects_libs.git" path="projects/seL4_projects_libs"/>
-    <project name="projects_libs.git" path="projects/projects_libs"/>
+    <project name="projects_libs.git" path="projects/projects_libs" remote="lucypa" revision="libsharedringbuffer"/>
     <project name="cakeml_libs.git" path="projects/cakeml_libs"/>
     <project remote="nicta" name="cogent" path="tools/cogent" revision="master"/>
-    <project name="opensbi" remote="opensbi" revision="234ed8e427f4d92903123199f6590d144e0d9351" path="tools/opensbi"/>
+    <project name="opensbi" remote="opensbi" revision="refs/tags/v0.9" path="tools/opensbi"/>
 </manifest>
